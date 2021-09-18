@@ -1,0 +1,30 @@
+{
+   "products_list": [
+        {
+            "name": "cpu fah7",
+            "price" :123,
+            "stock" : 12
+        },
+        {
+            "name": "microcpu 211z",
+            "price" :1,
+            "stock" : 1
+        },
+        {
+            "name": "microscopy",
+            "price" :54,
+            "stock" : 67
+        },
+        {
+            "name": "ram ddr4 8gb",
+            "price" :29000,
+            "stock" : 100
+        },
+        {
+            "name": "Gtx 96000 xt intel",
+            "price" :2500000,
+            "stock" : 2
+        }
+
+   ] 
+}

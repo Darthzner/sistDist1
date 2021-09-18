@@ -1,0 +1,6 @@
+syntax = "proto3";
+package tarea1;
+
+service ProductInfo {
+    rpc getProds(Product) returns (Product)
+}
