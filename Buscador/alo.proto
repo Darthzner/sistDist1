@@ -1,6 +1,12 @@
 syntax = "proto3";
 package tarea1;
 
+
+message Product {
+	string name = 1;
+}
+
+
 service ProductInfo {
     rpc getProds(Product) returns (Product)
 }
