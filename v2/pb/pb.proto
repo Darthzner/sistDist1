@@ -1,0 +1,21 @@
+syntax = "proto3";
+package tarea1;
+
+
+message Product {
+	string name = 1;
+}
+
+message Item {
+	string name = 1;
+	int32 price = 2;
+	int32 stock = 3;
+}
+
+message ProductInfo{
+	repeated Item item = 1;
+}
+
+service ProductInfo {
+    rpc getProds(Product) returns (ProductInfo)
+}
