@@ -6,6 +6,8 @@ from werkzeug.exceptions import HTTPException
 from werkzeug.exceptions import default_exceptions
 
 
+
+
 app = Flask(__name__)
 
 @app.errorhandler(Exception)
@@ -23,6 +25,7 @@ for ex in default_exceptions:
 @app.route('/api/getprod',methods=['GET'])
 def get_prods():
     with open("../Inventario/inventario.json") as prods:
+        
         jsonObject = json.load(prods)
         prods.close()
         return jsonify(jsonObject['products_list'])
@@ -32,12 +35,17 @@ def get_prods():
 
 
 if __name__ == '__main__':
+    r = redis.Redis(host='localhost', port=6379, db=0)
+    r.config_set('maxmemory', '100mb')
+    r.config_set('maxmemory-policy', 'allkeys-lru')
+    print(r.config_get('maxmemory', ))
+    print(r.config_get('maxmemory-policy'))
+    
     app.run(debug=True)
+
 """ 
-r = redis.Redis(host='localhost', port=6379, db=0)
 
 r.set("hello1",json.dumps({"nombre" : "dimeloMa"}))
 
-value = r.get('hello1')
+value = r.get('hello1') """
 
-print(value) """
