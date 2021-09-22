@@ -1,7 +1,3 @@
-# sistDist1
-
-https://github.com/tomasrasymas/flask-restful-api-template/blob/master/app.py
-
 # Tarea 3 BDDA
 
 ## Integrantes
@@ -14,26 +10,28 @@ En el presente proyecto se desea hacer un buscador para el cual se utilizaron la
 
 - Flask - es un microframework para Python para crear WebApps
 - Redis - motor de base de datos desarrollado por Amazon, que cumple la funcion de cache.
-- [gRPC] - es un sistema de tipo RPC open source desarrollado por google, que utiliza como transporte HTTP/3 y Protocol Buffers como lenguaje de descripcion de interfaz.
-- [JSON] - formato de texto sencillo para el intercambio de datos. 
-- [visual Studio Code] - Editor de texto desarrollado por Microsoft 
+- gRPC - es un sistema de tipo RPC open source desarrollado por google, que utiliza como transporte HTTP/3 y Protocol Buffers como lenguaje de descripcion de interfaz.
+- JSON - formato de texto sencillo para el intercambio de datos. 
+- visual Studio Code - Editor de texto desarrollado por Microsoft 
 
 ## Referencias
--[Flask] - [https://github.com/tomasrasymas/flask-restful-api-template/blob/master/app.py]
--[gRPC] - [https://github.com/yerkortiz/distributed-systems-notes/blob/main/grpc/example2/client.py]
+-[Flask] - https://github.com/tomasrasymas/flask-restful-api-template/blob/master/app.py
+-[gRPC] - https://github.com/yerkortiz/distributed-systems-notes/blob/main/grpc/example2/client.py
 
 ## Dependencias
-- [Flask] -
+- Flask 
 ```sh
 pip install FLask
 ```
-- Redis -
+- Redis 
 ```sh
-
+brew install redis (Para MacOS con homebrew).
+Para linux descargar imagen
+Para windows descargar .exe 
 ```
-- Docker -
+- Docker 
 ```sh
-sudo apt install p
+brew install docker (Para MacOS con homebrew)
 ```
 ## Ejecucion
 ```sh
@@ -50,4 +48,9 @@ python3 index.py
 Un vez corriendo el servidor y el contenedor de redis ejecutamos la siguiente consulta:
 ```sh
 curl http://localhost:5000/api/getprod
+```
+## Configuracion redis 
+```sh
+config set maxmemory 100M
+config set maxmemory-policy allkeys-lru
 ```
