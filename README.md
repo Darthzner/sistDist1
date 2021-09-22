@@ -1,17 +1,17 @@
-# Tarea 3 BDDA
+# Tarea 1 Sistemas Distribuidos
 
 ## Integrantes
 - Lester Carrasco.
 - Miguel Contreras.
 - Nicolás Poza.
 
-## Tecnologias 
-En el presente proyecto se desea hacer un buscador para el cual se utilizaron las siguientes tecnologias: 
+## Tecnologías 
+En el presente proyecto se desea hacer un buscador para el cual se utilizaron las siguientes tecnologías: 
 
-- Flask - es un microframework para Python para crear WebApps
-- Redis - motor de base de datos desarrollado por Amazon, que cumple la funcion de cache.
-- gRPC - es un sistema de tipo RPC open source desarrollado por google, que utiliza como transporte HTTP/3 y Protocol Buffers como lenguaje de descripcion de interfaz.
-- JSON - formato de texto sencillo para el intercambio de datos. 
+- Flask - Es un microframework para Python para crear WebApps.
+- Redis - Motor de base de datos desarrollado por Amazon, que cumple la función de cache.
+- gRPC - Es un sistema de tipo RPC open source desarrollado por google, que utiliza como transporte HTTP/3 y Protocol Buffers como lenguaje de descripción de interfaz.
+- JSON - Formato de texto sencillo para el intercambio de datos. 
 - visual Studio Code - Editor de texto desarrollado por Microsoft 
 
 ## Referencias
@@ -38,7 +38,7 @@ Para windows descargar .exe
 ```sh
 brew install docker (Para MacOS con homebrew)
 ```
-## Ejecucion
+## Ejecución
 ```sh
 docker run --name some-redis -d -p 6379:6379 redis
 ```
@@ -54,7 +54,7 @@ Un vez corriendo el servidor y el contenedor de redis ejecutamos la siguiente co
 ```sh
 curl http://localhost:5000/api/getprod
 ```
-## Configuracion redis 
+## Configuración redis 
 La configuración de redis se hizo dentro del codigo index.py
 ```sh
 if __name__ == '__main__':
