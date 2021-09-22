@@ -1,6 +1,10 @@
 syntax = "proto3";
-package tarea1;
 
+package search;
+
+service Search{	
+    rpc GetProds(Product) returns (ProductInfo) {}
+}
 
 message Product {
 	string name = 1;
@@ -16,6 +20,3 @@ message ProductInfo{
 	repeated Item item = 1;
 }
 
-service ProductInfo {
-    rpc getProds(Product) returns (ProductInfo)
-}
