@@ -42,7 +42,7 @@ docker run --name some-redis -d -p 6379:6379 redis
 git clone https://github.com/Darthzner/sistDist1.git
 ```
 ```sh
-cd sistDist1/buscador
+cd sistDist1/Buscador
 python3 index.py 
 python3 search_server.py
 ```
