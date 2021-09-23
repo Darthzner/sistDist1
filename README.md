@@ -12,11 +12,7 @@ En el presente proyecto se desea hacer un buscador para el cual se utilizaron la
 - Redis - Motor de base de datos desarrollado por Amazon, que cumple la función de cache.
 - gRPC - Es un sistema de tipo RPC open source desarrollado por google, que utiliza como transporte HTTP/3 y Protocol Buffers como lenguaje de descripción de interfaz.
 - JSON - Formato de texto sencillo para el intercambio de datos. 
-- visual Studio Code - Editor de texto desarrollado por Microsoft 
-
-## Referencias
-- [Flask] - https://github.com/tomasrasymas/flask-restful-api-template/blob/master/app.py
-- [gRPC] - https://github.com/yerkortiz/distributed-systems-notes/blob/main/grpc/example2/client.py
+- visual Studio Code - Editor de texto desarrollado por Microsoft. 
 
 ## Dependencias
 - Flask 
@@ -52,7 +48,7 @@ python3 index.py
 ## Servicio
 Un vez corriendo el servidor y el contenedor de redis ejecutamos la siguiente consulta:
 ```sh
-curl http://localhost:5000/api/getprod
+curl http://localhost:5000/api/getprod/ram
 ```
 ## Configuración redis 
 La configuración de redis se hizo dentro del codigo index.py
@@ -62,3 +58,7 @@ if __name__ == '__main__':
     r.config_set('maxmemory', '100mb')
     r.config_set('maxmemory-policy', 'allkeys-lru')
 ```
+## Referencias
+Repositorios utilizados para el desarrollo del buscador:
+- [Flask] - https://github.com/tomasrasymas/flask-restful-api-template/blob/master/app.py
+- [gRPC] - https://github.com/yerkortiz/distributed-systems-notes/blob/main/grpc/example2/client.py
