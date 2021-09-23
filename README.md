@@ -10,7 +10,7 @@ En el presente proyecto se desea hacer un buscador para el cual se utilizaron la
 
 - Flask - Es un microframework para Python para crear WebApps.
 - Redis - Motor de base de datos desarrollado por Amazon, que cumple la función de cache.
-- gRPC - Es un sistema de tipo RPC open source desarrollado por google, que utiliza como transporte HTTP/3 y Protocol Buffers como lenguaje de descripción de interfaz.
+- gRPC - Es un sistema de tipo RPC open source desarrollado por google, que utiliza como transporte HTTP/2 y Protocol Buffers como lenguaje de descripción de interfaz.
 - JSON - Formato de texto sencillo para el intercambio de datos. 
 - visual Studio Code - Editor de texto desarrollado por Microsoft. 
 
