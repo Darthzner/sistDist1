@@ -42,8 +42,9 @@ docker run --name some-redis -d -p 6379:6379 redis
 git clone https://github.com/Darthzner/sistDist1.git
 ```
 ```sh
-cd sistDist1
+cd sistDist1/buscador
 python3 index.py 
+python3 search_server.py
 ```
 ## Servicio
 Un vez corriendo el servidor y el contenedor de redis ejecutamos la siguiente consulta:
