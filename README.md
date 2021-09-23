@@ -49,8 +49,10 @@ python3 search_server.py
 ## Servicio
 Un vez corriendo el servidor y el contenedor de redis ejecutamos la siguiente consulta:
 ```sh
-curl http://localhost:5000/api/getprod/ram
+curl http://localhost:5000/api/getprod/[pname]
 ```
+En donde pname, puede ser remplazado por algun nombre que se encuentre en el inventario, tal como cpu, ram, etc.
+
 ## Configuración redis 
 La configuración de redis se hizo dentro del codigo index.py
 ```sh
